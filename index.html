@@ -11,32 +11,33 @@
          <div class="title">
             OTPless Login
          </div>
-         <form action="#" class="formdata">
+         <form action="welcome.html" class="formdata">
             <div class="field">
-                <input type="text" id="name" placeholder="Name" required>
+                <input type="text" id="name" placeholder="Name" disabled required>
              
              </div>
             <div class="field">
-               <input type="text" id="number"  placeholder="Verified number" >
+               <input type="text" id="number"  placeholder="Verified number" disabled required>
                
              
             </div>
             <div class="field">
-               <input type="text" id="email" placeholder="Verified email">
+               <input type="text" id="email" placeholder="Verified email" disabled required>
                
             </div>
            
             <div class="content">
                <div class="checkbox">
-                  <input type="checkbox" id="remember-me">
-                  <label for="remember-me">Remember me</label>
+                  <input type="checkbox" id="remember-me" >
+                  <label disabled for="remember-me">Remember me</label>
                </div>
                <div class="pass-link">
                   <a href="#">Forgot password?</a>
                </div>
             </div>
             <div class="field">
-               <input type="submit" value="Login">
+               
+               <input id="loginButton" type="submit" onclick="changeHeading()" value="Login">
             </div>
             <div class="signup-link">
                Not a member? <a href="#">Signup now</a>
@@ -63,8 +64,24 @@
    otplessEmail=JSON.parse(otplessEmail)
    document.getElementById("email").value=otplessEmail
    
+
+      
   }
+  function changeHeading() {
+     // Get the h1 element by its ID
+     var myHeading = document.getElementById('welcome');
+ 
+     // Change the inner HTML of the h1 element
+     myHeading.innerHTML = 'New Heading';
+   }
+
 </script>
+
+ 
+ 
+ 
+
+<script src="./otpless.js"></script>
 
    </body>
 </html>
